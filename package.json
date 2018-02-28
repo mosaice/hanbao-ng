@@ -47,7 +47,7 @@
     "@nguniversal/express-engine": "^5.0.0-beta.5",
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
     "core-js": "^2.5.3",
-    "ng-zorro-antd": "^0.6.14",
+    "ng-zorro-antd": "^0.6.15",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.20"
   },
