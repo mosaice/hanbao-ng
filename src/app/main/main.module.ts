@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ContainerComponent } from './container/container.component';
 import { HomeComponent } from './home/home.component';
+import { MatButtonModule } from '@angular/material';
 
 const mainRoutes: Routes = [
   {
@@ -25,6 +26,7 @@ const mainRoutes: Routes = [
 
 @NgModule({
   imports: [
+    MatButtonModule,
     RouterModule.forChild(mainRoutes)
   ],
   declarations: [

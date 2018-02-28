@@ -5,6 +5,7 @@ import {Component} from '@angular/core';
   template: `
   <div>
     <div>Container</div>
+    <button mat-fab color="primary">reset</button>
     <router-outlet></router-outlet>
   </div>`,
   styles: []

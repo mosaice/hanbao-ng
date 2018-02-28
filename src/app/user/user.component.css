@@ -1,3 +1,9 @@
+.container{
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
 .card{
   position: relative;
   padding: 20px;
@@ -51,6 +57,19 @@
   margin-top: 5px;
 }
 
+.social-btns i{
+  font-size: 21px;
+  color: #fff;
+}
+
+.social-btns button{
+  margin: 0 8px;
+}
+
+.tip{
+  margin-top: -20px;
+}
+
 .form-row, .card-form, .mat-input-container{
   width: 100%;
 }
@@ -79,4 +98,45 @@
 
 .card-footer button{
   color: #e91e63;
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left *{
+  color: #fff;
+}
+
+.right{
+  display: flex;
+}
+
+.right a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.right p{
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: normal;
+  color: #fff;
+}
+
+.right i{
+  font-size: 20px;
+}
+
+.router-active{
+  background-color: rgba(255,255,255,.1);
+  padding: 15px 18px 15px 15px;
+  border-radius: 3px;
 }

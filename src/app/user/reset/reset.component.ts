@@ -8,50 +8,52 @@ import {
 
 @Component({
   selector: 'app-reset',
-  templateUrl: './reset.component.html',
+  template: `
+    <button mat-fab color="primary">reset</button>
+  `,
   styleUrls: ['./reset.component.css']
 })
-export class ResetComponent implements OnInit {
-  validateForm: FormGroup;
+export class ResetComponent {
+  // validateForm: FormGroup;
 
-  _submitForm() {
-    for (const i in this.validateForm.controls) {
-      if (this.validateForm.controls.hasOwnProperty(i)) {
-        this.validateForm.controls[ i ].markAsDirty();
-      }
-    }
-  }
+  // _submitForm() {
+  //   for (const i in this.validateForm.controls) {
+  //     if (this.validateForm.controls.hasOwnProperty(i)) {
+  //       this.validateForm.controls[ i ].markAsDirty();
+  //     }
+  //   }
+  // }
 
-  constructor(private fb: FormBuilder) {
-  }
+  // constructor(private fb: FormBuilder) {
+  // }
 
-  updateConfirmValidator() {
-    /** wait for refresh value */
-    setTimeout(_ => {
-      this.validateForm.controls[ 'checkPassword' ].updateValueAndValidity();
-    });
-  }
+  // updateConfirmValidator() {
+  //   /** wait for refresh value */
+  //   setTimeout(_ => {
+  //     this.validateForm.controls[ 'checkPassword' ].updateValueAndValidity();
+  //   });
+  // }
 
-  confirmationValidator = (control: FormControl): { [s: string]: boolean } => {
-    if (!control.value) {
-      return { required: true };
-    } else if (control.value !== this.validateForm.controls[ 'password' ].value) {
-      return { confirm: true, error: true };
-    }
-  }
+  // confirmationValidator = (control: FormControl): { [s: string]: boolean } => {
+  //   if (!control.value) {
+  //     return { required: true };
+  //   } else if (control.value !== this.validateForm.controls[ 'password' ].value) {
+  //     return { confirm: true, error: true };
+  //   }
+  // }
 
-  getCaptcha(e: MouseEvent) {
-    e.preventDefault();
-  }
+  // getCaptcha(e: MouseEvent) {
+  //   e.preventDefault();
+  // }
 
-  ngOnInit() {
-    this.validateForm = this.fb.group({
-      password         : [ null, [ Validators.minLength(8) ] ],
-      checkPassword    : [ null, [ Validators.required, this.confirmationValidator ] ]
-    });
-  }
+  // ngOnInit() {
+  //   this.validateForm = this.fb.group({
+  //     password         : [ null, [ Validators.minLength(8) ] ],
+  //     checkPassword    : [ null, [ Validators.required, this.confirmationValidator ] ]
+  //   });
+  // }
 
-  getFormControl(name) {
-    return this.validateForm.controls[ name ];
-  }
+  // getFormControl(name) {
+  //   return this.validateForm.controls[ name ];
+  // }
 }

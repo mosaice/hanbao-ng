@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="background"></div>
+  <div class="container">
+    <header>
+      <div class="left">
+        <h5>HAN BAO</h5>
+      </div>
+      <div class="right">
+        <a routerLink="" ><i class="material-icons">dashboard</i><p>DASHBOARD</p></a>
+        <a routerLink="/user/login" routerLinkActive="router-active" [routerLinkActiveOptions]="{exact: true}"><i class="material-icons">fingerprint</i><p>LOGIN</p></a>
+        <a routerLink="/user/register" routerLinkActive="router-active"><i class="material-icons">person_add</i><p>REGISTER</p></a>
+        <a routerLink="/user/forgot" style="margin-right: 0" routerLinkActive="router-active"><i class="material-icons">lock_open</i><p>FORGOT</p></a>
+      </div>
+    </header>
+    <router-outlet></router-outlet>
+  </div>
+</div>

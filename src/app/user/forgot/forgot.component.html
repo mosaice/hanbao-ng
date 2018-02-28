@@ -1,25 +1,20 @@
-<div class="login-container">
-  <div style="text-align: center">
-    <img src="../../../assets/images/hanbao1.png" width="100" alt="Hanbao">
+<div class="row">
+  <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+    <div class="card">
+      <div class="card-header">
+       <h4>FORGOT PASSWORD</h4>
+      </div>
+      <div class="card-form">
+        <div class="form-row">
+          <i class="material-icons">email</i>
+          <mat-input-container color="accent">
+            <input type="text" matInput placeholder="Email address"/>
+          </mat-input-container>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button mat-button (click)="loginBtn()">SEND RESET EMAIL</button>
+      </div>
+    </div>
   </div>
-  <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="_submitForm()">
-    <div nz-form-item>
-      <div nz-form-control>
-        <nz-input formControlName="email" [nzPlaceHolder]="'Email'" [nzSize]="'large'">
-          <ng-template #prefix>
-            <i class="anticon anticon-user"></i>
-          </ng-template>
-        </nz-input>
-        <div nz-form-explain *ngIf="validateForm.controls.email.dirty&&validateForm.controls.email.hasError('required')">Please input your email!</div>
-        <div nz-form-explain *ngIf="validateForm.controls.email.dirty&&!validateForm.controls.email.hasError('required')&&validateForm.controls.email.hasError('email')">Email invalid!</div>
-      </div>
-    </div>
-    <div nz-form-item>
-      <div nz-form-control>
-        <button nz-button class="login-form-button" [nzType]="'primary'" [nzSize]="'large'" [disabled]="!validateForm.valid">Send</button>
-        <a class="login-form-register" routerLink="/user/register">register now!</a>
-        <a class="login-form-forgot" class="login-form-forgot" routerLink="/user/login">login</a>
-      </div>
-    </div>
-  </form>
 </div>

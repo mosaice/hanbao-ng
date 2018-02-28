@@ -1,8 +1,54 @@
-.register-form {
-  max-width: 540px;
-  margin: 0 auto;
+
+.card{
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  top: -50px;
+  -webkit-animation-name: card;
+  -moz-animation-name: card;
+  -o-animation-name: card;
+  animation-name: card;
+  -webkit-animation-duration: 600ms;
+  -moz-animation-duration: 600ms;
+  -o-animation-duration: 600ms;
+  animation-duration: 600ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-.register-container {
-  padding-top: 50px;
+@-webkit-keyframes card {
+  from {top: -40px;}
+  to {top: 0;}
+}
+
+@keyframes card {
+  from {top: -40px;}
+  to {top: 0;}
+}
+
+.form-row, .card-form, .mat-input-container{
+  width: 100%;
+}
+
+.card-form{
+  padding: 5px;
+}
+
+.form-row{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.form-row i{
+  position: relative;
+  top: -5px;
+  margin-right: 15px;
+  color: #555;
 }
