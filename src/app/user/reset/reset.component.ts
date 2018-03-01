@@ -8,52 +8,51 @@ import {
 
 @Component({
   selector: 'app-reset',
-  template: `
-    <button mat-fab color="primary">reset</button>
-  `,
-  styleUrls: ['./reset.component.css']
+  templateUrl: './reset.component.html',
+  styleUrls: ['../user.component.css']
 })
-export class ResetComponent {
-  // validateForm: FormGroup;
+export class ResetComponent implements OnInit {
+  validateForm: FormGroup;
 
-  // _submitForm() {
-  //   for (const i in this.validateForm.controls) {
-  //     if (this.validateForm.controls.hasOwnProperty(i)) {
-  //       this.validateForm.controls[ i ].markAsDirty();
-  //     }
-  //   }
-  // }
+  _submitForm() {
+    for (const i in this.validateForm.controls) {
+      if (this.validateForm.controls.hasOwnProperty(i)) {
+        this.validateForm.controls[i].markAsDirty();
+      }
+    }
+  }
 
-  // constructor(private fb: FormBuilder) {
-  // }
+  constructor(private fb: FormBuilder) {
+  }
 
-  // updateConfirmValidator() {
-  //   /** wait for refresh value */
-  //   setTimeout(_ => {
-  //     this.validateForm.controls[ 'checkPassword' ].updateValueAndValidity();
-  //   });
-  // }
+  passwordError(): string {
+    const { password: { dirty, errors } } = this.validateForm.controls;
+    if (!dirty || !errors) {
+      return '';
+    }
+    return errors.required ? 'You must enter a password' : errors.minlength ? 'Password need more than 8 digit!' : '';
+  }
 
-  // confirmationValidator = (control: FormControl): { [s: string]: boolean } => {
-  //   if (!control.value) {
-  //     return { required: true };
-  //   } else if (control.value !== this.validateForm.controls[ 'password' ].value) {
-  //     return { confirm: true, error: true };
-  //   }
-  // }
+  checkPasswordError(): string {
+    const { checkPassword: { dirty, errors } } = this.validateForm.controls;
+    if (!dirty || !errors) {
+      return '';
+    }
+    return 'You must enter the same password!';
+  }
 
-  // getCaptcha(e: MouseEvent) {
-  //   e.preventDefault();
-  // }
+  passwordConfirmationValidator = (control: FormControl): { [s: string]: boolean } => {
+    if (!control.value) {
+      return { required: true };
+    } else if (control.value !== this.validateForm.controls[ 'password' ].value) {
+      return { confirm: true, error: true };
+    }
+  }
 
-  // ngOnInit() {
-  //   this.validateForm = this.fb.group({
-  //     password         : [ null, [ Validators.minLength(8) ] ],
-  //     checkPassword    : [ null, [ Validators.required, this.confirmationValidator ] ]
-  //   });
-  // }
-
-  // getFormControl(name) {
-  //   return this.validateForm.controls[ name ];
-  // }
+  ngOnInit() {
+    this.validateForm = this.fb.group({
+      password: [ null, [ Validators.required, Validators.minLength(8) ] ],
+      checkPassword: [ null, [ this.passwordConfirmationValidator ] ],
+    });
+  }
 }

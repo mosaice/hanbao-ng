@@ -48,7 +48,9 @@
     "@nguniversal/common": "^5.0.0-beta.5",
     "@nguniversal/express-engine": "^5.0.0-beta.5",
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
+    "@types/lodash": "^4.14.104",
     "core-js": "^2.5.3",
+    "lodash": "^4.17.5",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.20"
   },

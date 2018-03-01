@@ -4,23 +4,25 @@
       <div class="card-header">
        <h4>Login</h4>
       </div>
-      <div class="card-form">
+      <form class="card-form" [formGroup]="validateForm" (ngSubmit)="_submitForm()">
         <div class="form-row">
           <i class="material-icons">email</i>
-          <mat-input-container color="accent">
-            <input type="text" matInput placeholder="Email address"/>
-          </mat-input-container>
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email"  required>
+            <mat-error *ngIf="emailError()">{{emailError()}}</mat-error>
+          </mat-form-field>
         </div>
         <div class="form-row">
           <i class="material-icons">lock_outline</i>
-          <mat-input-container color="accent">
-            <input type="password" matInput placeholder="Password"/>
-          </mat-input-container>
+          <mat-form-field>
+            <input matInput placeholder="Password" type="password" formControlName="password"  required>
+            <mat-error *ngIf="passwordError()">{{passwordError()}}</mat-error>
+          </mat-form-field>
         </div>
-      </div>
-      <div class="card-footer">
-        <button mat-button (click)="loginBtn()">LET'S GO</button>
-      </div>
+        <div class="card-footer">
+          <button mat-button color="accent" [disabled]="!validateForm.valid" >LET'S GO</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

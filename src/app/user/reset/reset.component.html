@@ -1,36 +1,30 @@
-<div class="login-container">
-  <div style="text-align: center">
-    <img src="../../../assets/images/hanbao1.png" width="100" alt="Hanbao">
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+      <div class="card">
+        <div class="card-header">
+         <h4>RESET PASSWORD</h4>
+        </div>
+        <form class="card-form" [formGroup]="validateForm" (ngSubmit)="_submitForm()">
+          <div class="form-row">
+            <i class="material-icons">lock_outline</i>
+            <mat-form-field>
+              <input matInput placeholder="Password" type="password" formControlName="password"  required>
+              <mat-error *ngIf="passwordError()">{{passwordError()}}</mat-error>
+            </mat-form-field>
+          </div>
+  
+          <div class="form-row">
+            <i class="material-icons">lock_outline</i>
+            <mat-form-field>
+              <input matInput placeholder="Confrim Password" type="password" formControlName="checkPassword"  required>
+              <mat-error *ngIf="checkPasswordError()">{{checkPasswordError()}}</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="card-footer">
+            <button mat-button color="accent" [disabled]="!validateForm.valid" >RESET</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <form nz-form [nzLayout]="'vertical'"  [formGroup]="validateForm" class="login-form" (ngSubmit)="_submitForm()">
-    <div nz-form-item nz-row>
-      <div nz-form-label nz-col>
-        <label>new Password</label>
-      </div>
-      <div nz-form-control nz-col>
-        <nz-input [nzSize]="'large'" formControlName="password" [nzType]="'password'" [nzId]="'password'" (ngModelChange)="updateConfirmValidator()">
-        </nz-input>
-        <div nz-form-explain *ngIf="getFormControl('password').dirty&&getFormControl('password').hasError('minlength')">Password need more than 8 digit!</div>
-      </div>
-    </div>
-
-    <div nz-form-item nz-row>
-      <div nz-form-label nz-col>
-        <label>Confirm Password</label>
-      </div>
-      <div nz-form-control nz-col>
-        <nz-input [nzSize]="'large'" formControlName="checkPassword" [nzType]="'password'" [nzId]="'checkPassword'" >
-        </nz-input>
-        <div nz-form-explain *ngIf="getFormControl('checkPassword').dirty&&getFormControl('checkPassword').hasError('required')">Please confirm your password!</div>
-        <div nz-form-explain *ngIf="getFormControl('checkPassword').dirty&&getFormControl('checkPassword').hasError('confirm')">Two passwords that you enter is inconsistent!</div>
-      </div>
-    </div>
-
-
-    <div nz-form-item>
-      <div nz-form-control>
-        <button nz-button class="login-form-button" [nzType]="'primary'" [nzSize]="'large'" [disabled]="!validateForm.valid">Reset now!</button>
-      </div>
-    </div>
-  </form>
-</div>
+  

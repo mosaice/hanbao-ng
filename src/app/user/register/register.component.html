@@ -2,32 +2,43 @@
   <div class="col-md-6 col-md-offset-3">
     <div class="card">
       <h2>Register</h2>
-      <div class="form-part">
-        <div class="row">
+      <form class="form-part" [formGroup]="validateForm" (ngSubmit)="_submitForm()">
+        <div class="form-row">
           <i class="material-icons">face</i>
-          <mat-input-container color="accent">
-            <input type="text" matInput placeholder="Name">
-          </mat-input-container>
+          <mat-form-field>
+            <input matInput placeholder="Name" formControlName="userName"  required>
+            <mat-error *ngIf="validateForm.controls.userName.dirty&&validateForm.controls.userName.hasError('require')">Please Input Your Name!</mat-error>
+          </mat-form-field>
         </div>
-        <div class="row">
+
+        <div class="form-row">
           <i class="material-icons">email</i>
-          <mat-input-container color="accent">
-            <input type="text" matInput placeholder="Email">
-          </mat-input-container>
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email"  required>
+            <mat-error *ngIf="emailError()">{{emailError()}}</mat-error>
+          </mat-form-field>
         </div>
-        <div class="row">
+
+        <div class="form-row">
           <i class="material-icons">lock_outline</i>
-          <mat-input-container color="accent">
-            <input type="text" matInput placeholder="Password">
-          </mat-input-container>
+          <mat-form-field>
+            <input matInput placeholder="Password" type="password" formControlName="password"  required>
+            <mat-error *ngIf="passwordError()">{{passwordError()}}</mat-error>
+          </mat-form-field>
         </div>
-        <div class="row">
-          <mat-checkbox style="margin-left: 2px"><p style="margin-left: 8px">I agree to the <span style="color: #9c27b0; cursor: pointer; font-weight: 400;">terms and conditions</span>.</p></mat-checkbox>
+
+        <div class="form-row">
+          <i class="material-icons">lock_outline</i>
+          <mat-form-field>
+            <input matInput placeholder="Confrim Password" type="password" formControlName="checkPassword"  required>
+            <mat-error *ngIf="checkPasswordError()">{{checkPasswordError()}}</mat-error>
+          </mat-form-field>
         </div>
-        <div class="row" style="display: flex; justify-content: center">
-          <button mat-raised-button class="btn btn-primary btn-round">GET STARTED</button>
+
+        <div class="register-btn">
+          <button mat-raised-button color="accent" class="btn-round" [disabled]="!validateForm.valid">GET STARTED</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
