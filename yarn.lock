@@ -27,21 +27,21 @@
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
-"@angular/animations@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/animations/download/@angular/animations-5.2.6.tgz#433aace8929ce362762dcccdb5044c3945a194bd"
+"@angular/animations@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/animations/download/@angular/animations-5.2.7.tgz#a99fe128f3809e3f8082441a6e676992b9352db7"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cdk@^5.2.3":
+"@angular/cdk@^5.0.0", "@angular/cdk@^5.2.3":
   version "5.2.3"
   resolved "http://registry.npm.taobao.org/@angular/cdk/download/@angular/cdk-5.2.3.tgz#b52e7040e1e6577b593b5d974b80020c1f5babe3"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cli@^1.7.1":
-  version "1.7.1"
-  resolved "http://registry.npm.taobao.org/@angular/cli/download/@angular/cli-1.7.1.tgz#3a9d0b8314d4c54226f941beeb53071385c294e0"
+"@angular/cli@^1.7.2":
+  version "1.7.2"
+  resolved "http://registry.npm.taobao.org/@angular/cli/download/@angular/cli-1.7.2.tgz#7539285cb83f33cc1b34aec47a5ef6e8656c8450"
   dependencies:
     "@angular-devkit/build-optimizer" "0.3.2"
     "@angular-devkit/core" "0.3.2"
@@ -104,48 +104,48 @@
   optionalDependencies:
     node-sass "^4.7.2"
 
-"@angular/common@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/common/download/@angular/common-5.2.6.tgz#0c6771739f1407eae0533e82c3ee42425badd489"
+"@angular/common@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/common/download/@angular/common-5.2.7.tgz#11bb9f00afe91af8d772ecdff83c2e179f9a67a0"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/compiler-cli@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/compiler-cli/download/@angular/compiler-cli-5.2.6.tgz#f60fccabaf8d09641aada8c112a6e4f336f8412d"
+"@angular/compiler-cli@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/compiler-cli/download/@angular/compiler-cli-5.2.7.tgz#3bad9d5e4c25ebc51e1bb67b71b26a97d6d3bbc5"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
     tsickle "^0.27.2"
 
-"@angular/compiler@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/compiler/download/@angular/compiler-5.2.6.tgz#0abf72b46c401688342057e3fb7cd59fef0a5ab1"
+"@angular/compiler@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/compiler/download/@angular/compiler-5.2.7.tgz#31dcc7ac18cc23cb115e76c541b982737ff93ec9"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/core@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/core/download/@angular/core-5.2.6.tgz#483fb0b720d563d3ec4d1895878249beafa39b9b"
+"@angular/core@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/core/download/@angular/core-5.2.7.tgz#e5607fc39d90f9fe4fbaaeeeb6cdb9371966bfe3"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/forms@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/forms/download/@angular/forms-5.2.6.tgz#fa3e37a9e97fa3e2b24d8564a66a11d430379bfe"
+"@angular/forms@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/forms/download/@angular/forms-5.2.7.tgz#a0c41fdb6b8ba2c32653cc3058d5fa47db91fbf8"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/http@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/http/download/@angular/http-5.2.6.tgz#4fa92e61b9848f8571c61ae9ad32af27cd71b043"
+"@angular/http@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/http/download/@angular/http-5.2.7.tgz#a163f6958f12d2665419123861b0d613c1c82afb"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/language-service@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-5.2.6.tgz#f88f49f54a82e95b05af50ded22f4ebbb344df1f"
+"@angular/language-service@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-5.2.7.tgz#065fc0d3f8d58b3439e1bafc10c85420e4391756"
 
 "@angular/material@^5.2.3":
   version "5.2.3"
@@ -153,35 +153,31 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser-dynamic@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/platform-browser-dynamic/download/@angular/platform-browser-dynamic-5.2.6.tgz#8795cca57306b7bdc2bc166d3928bc8eb145125c"
+"@angular/platform-browser-dynamic@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/platform-browser-dynamic/download/@angular/platform-browser-dynamic-5.2.7.tgz#91f903c1f73de2fba1004bc31ed1c3117c7f0406"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/platform-browser/download/@angular/platform-browser-5.2.6.tgz#ecb8a6d37506ffb3f181ea10696a3c7feaf1674c"
+"@angular/platform-browser@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/platform-browser/download/@angular/platform-browser-5.2.7.tgz#cfd86040c25380aabf0322ef47aecc61f23cc532"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-server@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/platform-server/download/@angular/platform-server-5.2.6.tgz#9a218acabd7a95b215ad8884f2f1d03d6faed024"
+"@angular/platform-server@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/platform-server/download/@angular/platform-server-5.2.7.tgz#e2eb290952dbe6ab04b4edae115a0d02b8b2dc4c"
   dependencies:
     domino "^1.0.29"
     tslib "^1.7.1"
     xhr2 "^0.1.4"
 
-"@angular/router@^5.2.6":
-  version "5.2.6"
-  resolved "http://registry.npm.taobao.org/@angular/router/download/@angular/router-5.2.6.tgz#513b555d5cc4b206833646468ffb47fa8f5c1c0b"
+"@angular/router@^5.2.7":
+  version "5.2.7"
+  resolved "http://registry.npm.taobao.org/@angular/router/download/@angular/router-5.2.7.tgz#691c375fe32f01bea56d169469ad8f254b136af9"
   dependencies:
     tslib "^1.7.1"
-
-"@auth0/angular-jwt@^1.0.0-beta.9":
-  version "1.0.0-beta.9"
-  resolved "http://registry.npm.taobao.org/@auth0/angular-jwt/download/@auth0/angular-jwt-1.0.0-beta.9.tgz#65022c349edc93dec3312f933b955c719e862a62"
 
 "@ngtools/json-schema@1.2.0":
   version "1.2.0"
@@ -243,10 +239,10 @@ abbrev@1:
   resolved "http://registry.npm.taobao.org/abbrev/download/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
 
 accepts@~1.3.4:
-  version "1.3.4"
-  resolved "http://registry.npm.taobao.org/accepts/download/accepts-1.3.4.tgz#86246758c7dd6d21a6474ff084a4740ec05eb21f"
+  version "1.3.5"
+  resolved "http://registry.npm.taobao.org/accepts/download/accepts-1.3.5.tgz#eb777df6011723a3b14e8a72c0805c8e86746bd2"
   dependencies:
-    mime-types "~2.1.16"
+    mime-types "~2.1.18"
     negotiator "0.6.1"
 
 acorn-dynamic-import@^2.0.0:
@@ -935,7 +931,7 @@ chokidar@^1.4.2, chokidar@^1.7.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
-chokidar@^2.0.0:
+chokidar@^2.0.0, chokidar@^2.0.2:
   version "2.0.2"
   resolved "http://registry.npm.taobao.org/chokidar/download/chokidar-2.0.2.tgz#4dc65139eeb2714977735b6a35d06e97b494dfd7"
   dependencies:
@@ -1020,9 +1016,9 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/code-point-at/download/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codelyzer@^4.1.0:
-  version "4.1.0"
-  resolved "http://registry.npm.taobao.org/codelyzer/download/codelyzer-4.1.0.tgz#3117754538d8f5ffa36dff91d340573a836cf373"
+codelyzer@^4.2.1:
+  version "4.2.1"
+  resolved "http://registry.npm.taobao.org/codelyzer/download/codelyzer-4.2.1.tgz#d56eaacefca7e8138aac0a630e484bdb09988544"
   dependencies:
     app-root-path "^2.0.1"
     css-selector-tokenizer "^0.7.0"
@@ -1103,8 +1099,8 @@ concat-map@0.0.1:
   resolved "http://registry.npm.taobao.org/concat-map/download/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
 concat-stream@^1.4.7, concat-stream@^1.5.0:
-  version "1.6.0"
-  resolved "http://registry.npm.taobao.org/concat-stream/download/concat-stream-1.6.0.tgz#0aac662fd52be78964d5532f694784e70110acf7"
+  version "1.6.1"
+  resolved "http://registry.npm.taobao.org/concat-stream/download/concat-stream-1.6.1.tgz#261b8f518301f1d834e36342b9fea095d2620a26"
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.2.2"
@@ -1164,14 +1160,14 @@ copy-descriptor@^0.1.0:
   resolved "http://registry.npm.taobao.org/copy-descriptor/download/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
 copy-webpack-plugin@~4.4.1:
-  version "4.4.2"
-  resolved "http://registry.npm.taobao.org/copy-webpack-plugin/download/copy-webpack-plugin-4.4.2.tgz#c92bcd7df4d5e42c51398cc36b23820d0d10446a"
+  version "4.4.3"
+  resolved "http://registry.npm.taobao.org/copy-webpack-plugin/download/copy-webpack-plugin-4.4.3.tgz#65d56fb9e1936b39e129f9aa2aec097ce1fd44be"
   dependencies:
     cacache "^10.0.1"
     find-cache-dir "^1.0.0"
     globby "^7.1.1"
     is-glob "^4.0.0"
-    loader-utils "^0.2.15"
+    loader-utils "^1.1.0"
     minimatch "^3.0.4"
     p-limit "^1.0.0"
     serialize-javascript "^1.4.0"
@@ -1942,8 +1938,8 @@ faye-websocket@~0.11.0:
     websocket-driver ">=0.5.1"
 
 file-loader@^1.1.5:
-  version "1.1.10"
-  resolved "http://registry.npm.taobao.org/file-loader/download/file-loader-1.1.10.tgz#77e97dfeab13da64c7085ab3e3887e29ae588aea"
+  version "1.1.11"
+  resolved "http://registry.npm.taobao.org/file-loader/download/file-loader-1.1.11.tgz#6fe886449b0f2a936e43cabaac0cdbfb369506f8"
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.4.5"
@@ -3111,7 +3107,7 @@ loader-utils@1.1.0, loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.
     emojis-list "^2.0.0"
     json5 "^0.5.0"
 
-loader-utils@^0.2.15, loader-utils@^0.2.16:
+loader-utils@^0.2.16:
   version "0.2.17"
   resolved "http://registry.npm.taobao.org/loader-utils/download/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   dependencies:
@@ -3299,7 +3295,7 @@ miller-rabin@^4.0.0:
   version "1.33.0"
   resolved "http://registry.npm.taobao.org/mime-db/download/mime-db-1.33.0.tgz#a3492050a5cb9b63450541e39d9788d2272783db"
 
-mime-types@^2.1.12, mime-types@~2.1.16, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.7:
+mime-types@^2.1.12, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.7:
   version "2.1.18"
   resolved "http://registry.npm.taobao.org/mime-types/download/mime-types-2.1.18.tgz#6f323f60a83d11146f831ff11fd66e2fe5503bb8"
   dependencies:
@@ -3378,6 +3374,10 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.18.1:
+  version "2.20.1"
+  resolved "http://registry.npm.taobao.org/moment/download/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/move-concurrently/download/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -3444,6 +3444,14 @@ nested-error-stacks@^1.0.0, nested-error-stacks@^1.0.1:
   resolved "http://registry.npm.taobao.org/nested-error-stacks/download/nested-error-stacks-1.0.2.tgz#19f619591519f096769a5ba9a86e6eeec823c3cf"
   dependencies:
     inherits "~2.0.1"
+
+ng-zorro-antd@^0.6.15:
+  version "0.6.15"
+  resolved "http://registry.npm.taobao.org/ng-zorro-antd/download/ng-zorro-antd-0.6.15.tgz#acef41a30febce835b871d52cd47d042ac2ed443"
+  dependencies:
+    "@angular/cdk" "^5.0.0"
+    moment "^2.18.1"
+    tslib "^1.7.1"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -5158,8 +5166,8 @@ tslint@^5.9.1:
     tsutils "^2.12.1"
 
 tsutils@^2.12.1:
-  version "2.21.2"
-  resolved "http://registry.npm.taobao.org/tsutils/download/tsutils-2.21.2.tgz#902aa5987e1440c47673543d96752df8d44ab9c7"
+  version "2.22.0"
+  resolved "http://registry.npm.taobao.org/tsutils/download/tsutils-2.22.0.tgz#26694814556a09bb5afd4802462931ad5294e3fa"
   dependencies:
     tslib "^1.8.1"
 
@@ -5403,12 +5411,12 @@ vm-browserify@0.0.4:
     indexof "0.0.1"
 
 watchpack@^1.4.0:
-  version "1.4.0"
-  resolved "http://registry.npm.taobao.org/watchpack/download/watchpack-1.4.0.tgz#4a1472bcbb952bd0a9bb4036801f954dfb39faac"
+  version "1.5.0"
+  resolved "http://registry.npm.taobao.org/watchpack/download/watchpack-1.5.0.tgz#231e783af830a22f8966f65c4c4bacc814072eed"
   dependencies:
-    async "^2.1.2"
-    chokidar "^1.7.0"
+    chokidar "^2.0.2"
     graceful-fs "^4.1.2"
+    neo-async "^2.5.0"
 
 wbuf@^1.1.0, wbuf@^1.7.2:
   version "1.7.2"

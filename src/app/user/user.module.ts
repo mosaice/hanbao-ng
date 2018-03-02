@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { InputErrorDirective } from './shared/input-error.directive';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { UserService } from './user.service';
 import { UserComponent } from './user.component';
 import { LoginComponent } from './login/login.component';
@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ResetComponent } from './reset/reset.component';
 import { UserGuard } from './user.guard';
+
 import {
   MatButtonModule,
   MatRadioModule,
@@ -25,10 +26,10 @@ const userRoutes: Routes = [
     component: UserComponent,
     canLoad: [UserGuard],
     children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent },
-      { path: 'forgot', component: ForgotComponent },
-      { path: 'reset', component: ResetComponent },
+      { path: 'login', component: LoginComponent},
+      { path: 'register', component: RegisterComponent},
+      { path: 'forgot', component: ForgotComponent},
+      { path: 'reset', component: ResetComponent},
       { path: '', redirectTo: 'login', pathMatch: 'full'}
     ]
   }
