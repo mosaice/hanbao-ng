@@ -179,6 +179,10 @@
   dependencies:
     tslib "^1.7.1"
 
+"@auth0/angular-jwt@^1.0.0-beta.9":
+  version "1.0.0-beta.9"
+  resolved "http://registry.npm.taobao.org/@auth0/angular-jwt/download/@auth0/angular-jwt-1.0.0-beta.9.tgz#65022c349edc93dec3312f933b955c719e862a62"
+
 "@ngtools/json-schema@1.2.0":
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/@ngtools/json-schema/download/@ngtools/json-schema-1.2.0.tgz#06e5ecd29e9a37d260a447dd873ea2becd228c4f"
@@ -298,6 +302,14 @@ align-text@^0.1.1, align-text@^0.1.3:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/amdefine/download/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+angular-async-local-storage@^3.1.1:
+  version "3.1.1"
+  resolved "http://registry.npm.taobao.org/angular-async-local-storage/download/angular-async-local-storage-3.1.1.tgz#a26ed076426f6cbcd8e4f430f9986d7850ba2a60"
+
+angular2-notifications@^0.9.7:
+  version "0.9.7"
+  resolved "http://registry.npm.taobao.org/angular2-notifications/download/angular2-notifications-0.9.7.tgz#210a007d6b15c92d3fd9b1b1a3e0e221517c09e0"
 
 ansi-html@0.0.7:
   version "0.0.7"
@@ -2980,6 +2992,10 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+jwt-decode@^2.2.0:
+  version "2.2.0"
+  resolved "http://registry.npm.taobao.org/jwt-decode/download/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
 
 karma-source-map-support@^1.2.0:
   version "1.2.0"

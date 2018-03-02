@@ -26,7 +26,8 @@
     "generate:prerender": "cd dist && node prerender",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:prerender": "cd dist/browser && http-server",
-    "serve:ssr": "node dist/server"
+    "serve:ssr": "node dist/server",
+    "ssr": "npm run build:ssr && npm run serve:ssr"
   },
   "pre-commit": [
     "lint"
@@ -49,7 +50,10 @@
     "@nguniversal/express-engine": "^5.0.0-beta.5",
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
     "@types/lodash": "^4.14.104",
+    "angular-async-local-storage": "^3.1.1",
+    "angular2-notifications": "^0.9.7",
     "core-js": "^2.5.3",
+    "jwt-decode": "^2.2.0",
     "lodash": "^4.17.5",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.20"

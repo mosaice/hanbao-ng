@@ -3,12 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { InputErrorDirective } from './shared/input-error.directive';
-
+import { UserService } from './user.service';
 import { UserComponent } from './user.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ResetComponent } from './reset/reset.component';
+import { UserGuard } from './user.guard';
 import {
   MatButtonModule,
   MatRadioModule,
@@ -22,6 +23,7 @@ const userRoutes: Routes = [
   {
     path: '',
     component: UserComponent,
+    canLoad: [UserGuard],
     children: [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
@@ -51,7 +53,8 @@ const userRoutes: Routes = [
     RegisterComponent,
     ForgotComponent,
     ResetComponent,
-  ]
+  ],
+  providers: [UserService]
 
 })
 export class UserModule { }

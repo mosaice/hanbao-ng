@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators,  FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +11,17 @@ import { Validators,  FormBuilder, FormGroup } from '@angular/forms';
 export class LoginComponent implements OnInit {
   validateForm: FormGroup;
 
+  constructor(private fb: FormBuilder, public userService: UserService) {
+  }
+
   _submitForm() {
     for (const i in this.validateForm.controls) {
       if (this.validateForm.controls.hasOwnProperty(i)) {
         this.validateForm.controls[i].markAsDirty();
       }
     }
-  }
 
-  constructor(private fb: FormBuilder) {
+    this.userService.login(this.validateForm.value);
   }
 
   emailError(): string {
@@ -41,6 +45,7 @@ export class LoginComponent implements OnInit {
       email: [ null, [ Validators.required, Validators.email ] ],
       password: [ null, [ Validators.required, Validators.minLength(8) ] ],
     });
+
   }
 
 }
