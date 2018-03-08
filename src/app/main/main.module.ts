@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { NgZorroAntdModule } from 'ng-zorro-antd';
-// import { CommonModule } from '@angular/common';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 import { ContainerComponent } from './container/container.component';
 import { HomeComponent } from './home/home.component';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatSidenavModule, MatCheckboxModule } from '@angular/material';
 
 const mainRoutes: Routes = [
   {
@@ -26,7 +26,9 @@ const mainRoutes: Routes = [
 
 @NgModule({
   imports: [
+    CommonModule,
     MatButtonModule,
+    MatSidenavModule,
     RouterModule.forChild(mainRoutes)
   ],
   declarations: [

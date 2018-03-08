@@ -4,6 +4,7 @@ import {
   FormGroup,
   Validators
 } from '@angular/forms';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-forgot',
@@ -14,15 +15,16 @@ export class ForgotComponent implements OnInit {
   validateForm: FormGroup;
 
   _submitForm() {
-    console.log(111);
     for (const i in this.validateForm.controls) {
       if (this.validateForm.controls.hasOwnProperty(i)) {
         this.validateForm.controls[i].markAsDirty();
       }
     }
+
+    this.userService.sendResetMail(this.validateForm.value);
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public userService: UserService) {
   }
 
   emailError(): string {

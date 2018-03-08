@@ -29,7 +29,7 @@ const userRoutes: Routes = [
       { path: 'login', component: LoginComponent},
       { path: 'register', component: RegisterComponent},
       { path: 'forgot', component: ForgotComponent},
-      { path: 'reset', component: ResetComponent},
+      { path: 'reset', component: ResetComponent, canActivate: [UserGuard]},
       { path: '', redirectTo: 'login', pathMatch: 'full'}
     ]
   }
@@ -55,7 +55,7 @@ const userRoutes: Routes = [
     ForgotComponent,
     ResetComponent,
   ],
-  providers: [UserService]
+  providers: [UserService, UserGuard]
 
 })
 export class UserModule { }

@@ -5,6 +5,9 @@ import {
   Validators,
   FormControl
 } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { UserService } from '../user.service';
+
 
 @Component({
   selector: 'app-reset',
@@ -20,9 +23,17 @@ export class ResetComponent implements OnInit {
         this.validateForm.controls[i].markAsDirty();
       }
     }
+
+    this.userService.resetPassword({
+      userKey: this.routerState.snapshot.queryParams.userKey,
+      password: this.validateForm.controls.password.value
+    });
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserService,
+    private routerState: ActivatedRoute) {
   }
 
   passwordError(): string {

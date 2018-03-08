@@ -9,6 +9,11 @@ export class UserGuard implements CanLoad, CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    const valid = !!next.queryParams.userKey;
+    if (!valid) {
+      this.router.navigate(['/']);
+      return false;
+    }
     return true;
   }
 

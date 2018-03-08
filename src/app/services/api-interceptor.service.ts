@@ -19,6 +19,10 @@ export class APIInterceptor implements HttpInterceptor {
     if (this.auth.isLogin) {
       headers = headers.append('Authorization', `Bearer ${this.auth.token}`);
     }
+    if (req.url.includes('[noErrorCatch]')) {
+      const request = req.clone({url: url + req.url.replace('[noErrorCatch]', ''), headers});
+      return next.handle(request);
+    }
     const clonedRequest = req.clone({url: url + req.url, headers});
     return next.handle(clonedRequest)
     .filter((ev: HttpEvent<any>) => {

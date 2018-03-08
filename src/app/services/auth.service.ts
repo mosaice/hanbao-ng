@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationsService } from 'angular2-notifications';
+import { AsyncLocalStorage } from 'angular-async-local-storage';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 import * as jwtDecode from 'jwt-decode';
 
 interface User {
@@ -17,7 +22,11 @@ export class AuthService {
   token: string | null;
   user: User | null;
 
-  constructor(private toast: NotificationsService, private router: Router) {}
+  constructor(
+    private toast: NotificationsService,
+    private router: Router,
+    protected localStorage: AsyncLocalStorage
+  ) {}
 
   checkLoggedIn() {
     const token = localStorage.getItem('hanbaoJWT');

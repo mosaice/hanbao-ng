@@ -6,8 +6,8 @@
         <div class="form-row">
           <i class="material-icons">face</i>
           <mat-form-field>
-            <input matInput placeholder="Name" formControlName="userName"  required>
-            <mat-error *ngIf="validateForm.controls.userName.dirty&&validateForm.controls.userName.hasError('require')">Please Input Your Name!</mat-error>
+            <input matInput placeholder="Name" formControlName="name"  required>
+            <mat-error *ngIf="nameError()">{{nameError()}}</mat-error>
           </mat-form-field>
         </div>
 

@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators,  FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { UserService } from '../user.service';
+import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
+import 'rxjs/add/operator/mapTo';
+import 'rxjs/add/observable/timer';
+import 'rxjs/add/operator/switchMapTo';
 
 @Component({
   selector: 'app-register',
@@ -10,22 +16,47 @@ export class RegisterComponent implements OnInit {
   validateForm: FormGroup;
 
   _submitForm() {
+
     for (const i in this.validateForm.controls) {
       if (this.validateForm.controls.hasOwnProperty(i)) {
         this.validateForm.controls[i].markAsDirty();
       }
     }
+
+    this.userService.register(this.validateForm.value);
   }
 
-  constructor(private fb: FormBuilder) {
-  }
+  constructor(
+    private fb: FormBuilder,
+    public userService: UserService,
+    private http: HttpClient
+  ) {}
 
   emailError(): string {
     const { email: { dirty, errors } } = this.validateForm.controls;
-    if (!dirty || !errors) {
-      return '';
-    }
-    return errors.required ? 'You must enter a email' : errors.email ? 'Not a valid email' : '';
+    if (!dirty || !errors) { return ''; }
+    return errors.required ?
+      'You must enter a email'
+      :
+      errors.email ?
+      'Not a valid email'
+      :
+      errors.duplicated ?
+      'E-mail already exists'
+      :
+      '';
+  }
+
+  nameError(): string {
+    const { name: { dirty, errors } } = this.validateForm.controls;
+    if (!dirty || !errors) { return ''; }
+    return errors.required ?
+      'Please Input Your Name!'
+      :
+      errors.duplicated ?
+      'userName already exists'
+      :
+      '';
   }
 
   passwordError(): string {
@@ -37,7 +68,6 @@ export class RegisterComponent implements OnInit {
   }
 
   checkPasswordError(): string {
-    console.log(this.validateForm.controls.checkPassword);
     const { checkPassword: { dirty, errors } } = this.validateForm.controls;
     if (!dirty || !errors) {
       return '';
@@ -53,12 +83,20 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  asyncValidatorCreator = (filed: string) =>
+    (control: FormControl): any =>
+      Observable
+      .timer(500)
+      .switchMapTo(this.http.post<Res<{}>>('[noErrorCatch]/user/validate', {[filed]: control.value}))
+      .map(res => res.statusCode !== 200 ? { error: true, duplicated: true } : null)
+
   ngOnInit() {
     this.validateForm = this.fb.group({
-      userName: [ null, [ Validators.required ] ],
-      email: [ null, [ Validators.required, Validators.email ] ],
+      name: [ null, [ Validators.required], [this.asyncValidatorCreator('name')] ],
+      email: [ null, [ Validators.required, Validators.email ], [this.asyncValidatorCreator('email')] ],
       password: [ null, [ Validators.required, Validators.minLength(8) ] ],
       checkPassword: [ null, [ this.passwordConfirmationValidator ] ],
     });
   }
+
 }

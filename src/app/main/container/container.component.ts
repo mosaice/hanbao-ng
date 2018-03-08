@@ -2,12 +2,11 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-main-container',
-  template: `
-  <div>
-    <div>Container</div>
-    <a routerLink="/user/login">User</a>
-    <router-outlet></router-outlet>
-  </div>`,
-  styles: []
+  templateUrl: './container.component.html',
+  styleUrls: ['./container.component.css']
 })
-export class ContainerComponent {}
+export class ContainerComponent {
+  events = [];
+
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+}
