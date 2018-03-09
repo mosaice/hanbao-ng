@@ -1,11 +1,54 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" [opened]="true">
-    Sidenav content
-  </mat-drawer>
+<mat-sidenav-container class="drawer-container" [autosize]="true">
+  <mat-sidenav
+    mode="side"
+    class="drawer"
+    [opened]="uiState.drawerOpened"
+    [fixedInViewport]
+  >
+    <div class="logo">
+      <img src="../../../assets/images/hanbao1.png" class="logo-img" alt="logo"/>
+      <span>DASHBOARD</span>
+    </div>
 
-  <mat-drawer-content>
+
+    <div class="sidebar-wrapper">
+      <div class="nav-container">
+        <ul class="nav">
+          <li>
+            <a
+              routerLink=""
+              routerLinkActive="router-active"
+              [routerLinkActiveOptions]="{exact: true}"
+              class="router-link"
+            >
+              <i class="material-icons">notifications</i>
+              <span>EXPLORE</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="router-link">
+              <i class="material-icons">notifications</i>
+              <span>GROUPS</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="router-link">
+              <i class="material-icons">notifications</i>
+              <span>SEARCH</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="drawer-content">
+    <app-main-header></app-main-header>
     <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 

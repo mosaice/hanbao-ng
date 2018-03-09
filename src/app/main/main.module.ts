@@ -3,10 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-
+import { MainUiService } from './main-ui.service';
 import { ContainerComponent } from './container/container.component';
 import { HomeComponent } from './home/home.component';
-import { MatButtonModule, MatSidenavModule, MatCheckboxModule } from '@angular/material';
+import { HeaderComponent } from './header/header.component';
+import {
+  MatButtonModule,
+  MatSidenavModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatMenuModule,
+  MatIconModule
+} from '@angular/material';
 
 const mainRoutes: Routes = [
   {
@@ -28,12 +36,19 @@ const mainRoutes: Routes = [
   imports: [
     CommonModule,
     MatButtonModule,
+    MatInputModule,
     MatSidenavModule,
+    MatMenuModule,
+    MatIconModule,
     RouterModule.forChild(mainRoutes)
   ],
   declarations: [
+    HeaderComponent,
     HomeComponent,
     ContainerComponent
+  ],
+  providers: [
+    MainUiService
   ]
 
 })

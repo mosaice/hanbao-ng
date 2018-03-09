@@ -1,0 +1,48 @@
+<div class="nav-bar">
+  <div class="left-part">
+    <button *ngIf="!uiState.drawerOpened" mat-icon-button (click)="uiState.toggleDrawer()">
+      <mat-icon>dashboard</mat-icon>
+    </button>
+    <button *ngIf="uiState.drawerOpened" mat-mini-fab (click)="uiState.toggleDrawer()">
+      <mat-icon>dashboard</mat-icon>      
+    </button>
+    <h4>Test</h4>
+  </div>
+
+  <div class="right-part">
+    <div class="right-part" id="nav-right">
+      <mat-input-container color="#ff0000">
+        <input matInput type="search" placeholder="Search">
+      </mat-input-container>
+      <button mat-mini-fab class="search-btn">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-icon-button class="msg-btn">
+        <span>1</span>
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>person</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>用户中心</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>历史记录</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>聊天信息</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>退出</span>
+        </button>
+      </mat-menu>
+    </div>
+
+  </div>
+</div>

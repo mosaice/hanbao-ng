@@ -1,14 +1,90 @@
-.example-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.drawer-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  flex: 1;
 }
 
-.example-events {
-  width: 300px;
-  height: 200px;
-  overflow: auto;
-  border: 1px solid #555;
+.drawer {
+  width: 260px;
+  background-color: #D80B0B;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+}
+
+.logo{
+  color: #fff;
+  padding: 10px 5px;
+  font-size: 18px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo img{
+  width: 50px;
+  position: relative;
+  top: -3px;
+  margin-right: 20px;
+  /* float: left; */
+}
+
+
+
+.sidebar-wrapper{
+  overflow-y: auto;
+  padding-bottom: 30px;
+  width: 260px;
+  position: relative;
+  height: 100%;
+}
+
+.nav-container{
+  position: relative;
+}
+
+.nav li{
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.router-link{
+  display: flex;
+  align-items: center;
+  color: rgba(255,255,255,.8);
+  margin: 0 15px;
+  padding: 0 15px;
+  border-radius: 3px;
+  height: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+}
+
+.router-link:hover, .parent-active{
+  background-color: rgba(255,255,255,.1);
+}
+
+.router-link span{
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.drawer-content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 15px;
+}
+
+.router-active {
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.router-active:hover {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(255, 255, 255);  
 }

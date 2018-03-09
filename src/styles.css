@@ -9,6 +9,10 @@ html, body, main {
 }
 
 body {
+  font-family: "Roboto","Nunito", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
   background-color: #eee;
 }
 
@@ -17,11 +21,11 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, button, div, label, small {
-  font-family: "Nunito", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
-  /*line-height: 1.5em;*/
+ul {
+  display: block;
+  padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 h1, .h1 {
@@ -67,64 +71,6 @@ a:hover{
 
 b{
   font-weight: 300;
-}
-
-.subtitle{
-  margin-top: 15px;
-  color: #3C4858;
-}
-
-.container{
-  padding: 15px 30px;
-}
-
-.card{
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  border-radius: 6px;
-  color: rgba(0,0,0, 0.87);
-  background: #fff;
-}
-
-.card-raised{
-  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-.page-title{
-  margin-top: 40px;
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 100%;
-  }
-}
-
-.background{
-  background: url("./assets/images/login_bg.jpg") no-repeat center center;
-  height: 100%;
-  background-size: cover;
-  filter: brightness(40%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-}
-
-.swal2-modal{
-  outline: none;
 }
 
 /* loading style*/
