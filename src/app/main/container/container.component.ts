@@ -7,5 +7,5 @@ import { MainUiService } from '../main-ui.service';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent {
-  constructor(private uiState: MainUiService) {}
+  constructor(public uiState: MainUiService) {}
 }

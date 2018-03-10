@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { UserService } from './user.service';
 import { UserComponent } from './user.component';
 import { LoginComponent } from './login/login.component';
