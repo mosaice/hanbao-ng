@@ -4,6 +4,55 @@
   z-index: 1;
 }
 
+.container{
+  padding: 15px 30px;
+}
+
+.card{
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  color: rgba(0,0,0, 0.87);
+  background: #fff;
+}
+
+.card-raised{
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.page-title{
+  margin-top: 40px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+
+.background{
+  background: url("../../assets/images/login_bg.jpg") no-repeat center center;
+  height: 100%;
+  background-size: cover;
+  filter: brightness(40%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
 
 header{
   display: flex;

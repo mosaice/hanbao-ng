@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule, Router} from '@angular/router';
-import { AsyncLocalStorageModule } from 'angular-async-local-storage';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import {TransferHttpCacheModule} from '@nguniversal/common';
@@ -21,7 +20,6 @@ import { APIInterceptor } from './services/api-interceptor.service';
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
     TransferHttpCacheModule,
-    AsyncLocalStorageModule,
     MatButtonModule,
     HttpClientModule,
     SimpleNotificationsModule.forRoot(),

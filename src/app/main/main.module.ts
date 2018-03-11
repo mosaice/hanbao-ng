@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TuiModule } from 'ngx-tui-editor';
 
 import { MainUiService } from './main-ui.service';
 import { ContainerComponent } from './container/container.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { EditorComponent } from './editor/editor.component';
 import {
   MatButtonModule,
   MatSidenavModule,
@@ -20,13 +22,15 @@ const mainRoutes: Routes = [
   {
     path: '',
     component: ContainerComponent,
-    // canActivate: [AuthGuard],
     children: [
       {
         path: '',
         component: HomeComponent,
         pathMatch: 'full'
-        // canActivateChild: [AuthGuard],
+      },
+      {
+        path: 'editor',
+        component: EditorComponent,
       }
     ]
   }
@@ -35,6 +39,7 @@ const mainRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    TuiModule,
     MatButtonModule,
     MatInputModule,
     MatSidenavModule,
@@ -45,6 +50,7 @@ const mainRoutes: Routes = [
   declarations: [
     HeaderComponent,
     HomeComponent,
+    EditorComponent,
     ContainerComponent
   ],
   providers: [
