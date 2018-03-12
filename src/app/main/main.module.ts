@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { TuiModule } from 'ngx-tui-editor';
+// import { TuiModule } from 'ngx-tui-editor';
 
 import { MainUiService } from './main-ui.service';
 import { ContainerComponent } from './container/container.component';
@@ -39,7 +39,7 @@ const mainRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    TuiModule,
+    // TuiModule,
     MatButtonModule,
     MatInputModule,
     MatSidenavModule,

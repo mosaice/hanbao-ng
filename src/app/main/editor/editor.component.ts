@@ -1,24 +1,38 @@
-import { Component } from '@angular/core';
-import { TuiService } from 'ngx-tui-editor';
+import { Component, OnInit } from '@angular/core';
+const TuiEditor = require('tui-editor/dist/tui-editor-Editor-all.min');
+
+
 
 @Component({
   selector: 'app-main-editor',
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css']
 })
-export class EditorComponent {
+export class EditorComponent implements OnInit  {
+  editor: any;
   options: {
-    initialValue: `# Title`,
+    initialValue: '# Title of Project',
     initialEditType: 'markdown',
-    previewStyle: 'vertical',
+    previewStyle: 'tab',
     height: 'auto',
-    minHeight: '500px'
+    minHeight: '500px',
+    exts: ['colorSyntax']
   };
 
-  constructor(private editorService: TuiService) {}
 
   submit() {
-    console.log(this.editorService.getHtml());
+    console.log(this.editor.getHtml());
+  }
+
+  ngOnInit() {
+    this.editor = new TuiEditor({
+      el: document.querySelector('#editor'),
+      initialEditType: 'markdown',
+      previewStyle: 'vertical',
+      height: 'auto',
+      minHeight: '500px',
+      exts: ['scrollSync', 'colorSyntax', 'table']
+    });
   }
 
 }

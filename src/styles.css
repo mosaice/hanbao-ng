@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~codemirror/lib/codemirror.css';
+@import '~tui-editor/dist/tui-editor.min.css';
+@import '~tui-editor/dist/tui-editor-contents.min.css';
+@import '~highlight.js/styles/agate.css';
+/* @import "~highlight.js/styles/atom-one-dark.css"; */
+
 
 
 html, body, main {
@@ -71,6 +77,14 @@ a:hover{
 
 b{
   font-weight: 300;
+}
+
+.tui-editor-contents pre {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #333;
+  color: white;
 }
 
 
@@ -150,85 +164,6 @@ b{
   }
 }
 
-@media screen and (min-width: 991px){
-  #menu{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 990px){
-  #sidebar, #nav-right, #nav-left-button{
-    display: none;
-  }
-  #menu{
-    display: inline;
-  }
-  #main-panel{
-    padding-left: 0;
-    -webkit-transition: all 400ms;
-    -moz-transition: all 400ms;
-    -ms-transition: all 400ms;
-    -o-transition: all 400ms;
-    transition: all 400ms;
-  }
-}
-
-/* input text style */
-.mat-input-underline .mat-input-ripple {
-  background-color: #9c27b0 !important;
-}
-
-.mat-focused .mat-input-placeholder{
-  color: #aaa !important;
-}
-
-/* drop down menu */
-.mat-menu-panel{
-  border-radius: 3px;
-}
-
-.mat-menu-content{
-  padding: 5px !important;
-}
-
-.mat-menu-content .mat-menu-item{
-  font-size: 13px;
-  border-radius: 2px;
-  line-height: 38px;
-  height: 38px;
-  -webkit-transition: all 400ms;
-  -moz-transition: all 400ms;
-  -ms-transition: all 400ms;
-  -o-transition: all 400ms;
-  transition: all 400ms;
-}
-
-.mat-menu-content .mat-menu-item:hover{
-  background-color: #9c27b0 !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4) !important;
-  -webkit-transition: all 400ms;
-  -moz-transition: all 400ms;
-  -ms-transition: all 400ms;
-  -o-transition: all 400ms;
-  transition: all 400ms;
-}
-
-/* circle button style */
-.mat-mini-fab{
-  font-size: 20px !important;
-  outline: none !important;
-  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12) !important;
-}
-
-.mat-mini-fab:hover{
-  color: #fff !important;
-  box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2) !important;
-}
-
-.mat-mini-fab:focus{
-  color: #fff !important;
-}
 
 /* btn style */
 .btn{
@@ -252,71 +187,6 @@ b{
   border-radius: 30px !important;
 }
 
-.btn-round .mat-ripple{
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-}
-
-.btn-primary{
-  background-color: #9c27b0 !important;
-  color: #FFF !important;
-  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12) !important;
-}
-
-.btn-primary:hover{
-  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2) !important;
-}
-
-.btn-rose{
-  background-color: #e91e63 !important;
-  color: #FFF !important;
-  box-shadow: 0 2px 2px 0 rgba(233, 30, 99, 0.14), 0 3px 1px -2px rgba(233, 30, 99, 0.2), 0 1px 5px 0 rgba(233, 30, 99, 0.12) !important;
-}
-
-.btn-rose:hover{
-  box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2) !important;
-}
-
-.btn-success{
-  background-color: #4caf50 !important;
-  color: #FFF !important;
-  box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12) !important;
-}
-
-.btn-success:hover{
-  box-shadow: 0 14px 26px -12px rgba(76, 175, 80, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2) !important;
-}
-
-.btn-warning{
-  background-color: #ff9800 !important;
-  color: #FFF !important;
-  box-shadow: 0 2px 2px 0 rgba(255, 152, 0, 0.14), 0 3px 1px -2px rgba(255, 152, 0, 0.2), 0 1px 5px 0 rgba(255, 152, 0, 0.12) !important;
-}
-
-.btn-warning:hover{
-  box-shadow: 0 14px 26px -12px rgba(255, 152, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2) !important;
-}
-
-.btn-danger{
-  background-color: #f44336 !important;
-  color: #FFF !important;
-  box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12) !important;
-}
-
-.btn-danger:hover{
-  box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2) !important;
-}
-
-.btn-info{
-  background-color: #00bcd4 !important;
-  color: #FFF !important;
-  box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14), 0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12) !important;
-}
-
-.btn-info:hover{
-  box-shadow: 0 14px 26px -12px rgba(0, 188, 212, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2) !important;
-}
 
 /* checkbox */
 .mat-checkbox-checkmark-path { /* stick */
@@ -335,131 +205,8 @@ b{
   animation: 300ms linear 0s mat-checkbox-unchecked-checked-checkmark-path !important;
 }
 
-/* table */
-.table-responsive{
-  border: none;
-  margin: 0;
-}
 
-.table{
-  width: 100%;
-  max-width: 100%;
-  margin: 20px 0 0 0;
-}
-
-.table > thead > tr > th, .table > tbody > tr > th, .table > thead > tr > td, .table > tbody > tr > td{
-  padding: 12px 8px;
-  vertical-align: middle;
-}
-
-.table > thead > tr > th {
-  font-size: 1.25em;
-  font-weight: 300;
-  border-bottom-width: 1px;
-}
-
-/* text color */
-.text-primary, .alert-primary .alert-icon{
-  color: #9c27b0;
-}
-
-.text-danger, .alert-danger .alert-icon{
-  color: #f44336;
-}
-
-.text-info, .alert-info .alert-icon{
-  color: #00bcd4;
-}
-
-.text-warning, .alert-warning .alert-icon{
-  color: #ff9800;
-}
-
-.text-rose, .alert-rose .alert-icon{
-  color: #e91e63;
-}
-
-.text-success, .alert-success .alert-icon{
-  color: #4caf50;
-}
-
-/** alert **/
-.alert{
-  border: none;
-  position: relative;
-  padding: 20px 15px;
-  color: #ffffff;
-  border-radius: 3px;
-}
-
-.alert span{
-  font-weight: 100;
-  width: 93%;
-  display: block;
-}
-
-.alert .close{
-  text-shadow: none;
-  opacity: 1;
-  color: #fff;
-  position: relative;
-  top: -6px;
-  outline: none;
-}
-
-.alert .close i{
-  font-size: 11px;
-}
-
-.alert-primary{
-  background-color: #af2cc5;
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
-}
-
-.alert-info{
-  background-color: #00bcd4;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
-}
-
-.alert-rose{
-  background-color: #eb3573;
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
-}
-
-.alert-success{
-  background-color: #5cb860;
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4);
-}
-
-.alert-warning{
-  background-color: #ffa21a;
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
-}
-
-.alert-danger{
-  background-color: #f55a4e;
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4);
-}
-
-.alert-with-icon{
-  margin-top: 43px;
-}
-
-.alert-with-icon span{
-  padding-left: 55px;
-}
-
-.alert-with-icon .alert-icon{
-  position: absolute;
-  top: -17px;
-  left: 17px;
-  background-color: #fff;
-  border-radius: 50%;
-  font-size: 20px;
-  padding: 9px;
-  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
+/* 
 #loader-box {
   overflow: hidden;
   position: relative;
@@ -592,4 +339,4 @@ b{
     -webkit-transform: scale(.5);
     transform: scale(.5)
   }
-}
+} */
